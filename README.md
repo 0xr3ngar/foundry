@@ -39,6 +39,21 @@ Each folder gets an `example.md` with checklists/tables/code blocks to guide not
 
 ## Examples
 
+The `examples/` folder contains generated projects for each template type. Browse them to see the folder structures and `example.md` scaffolds:
+
+```bash
+tree examples -L 3
+```
+
+**Example projects:**
+- `Example-CTF/` — CTF challenge workspace
+- `Example-HTB-Box/` — HackTheBox/TryHackMe box workflow
+- `Example-HTB-Module/` — HTB Academy module study structure
+- `Example-Pentest/` — EPT/IPT engagement structure
+- `Example-Bug-Bounty/` — Bug bounty recon/findings workflow
+
+**Usage examples:**
+
 List templates:
 ```bash
 foundry list
@@ -51,7 +66,7 @@ foundry init "Demo Pentest" --type pentest --root ./output
 
 Interactive (prompts for missing pieces):
 ```bash
-foundry src/cli.ts init
+foundry init
 ```
 
 ## Development Scripts
@@ -79,6 +94,7 @@ bun run test         # Tests (none yet)
 │   ├── prompts.ts        # Interactive wizard (inquirer)
 │   ├── generator.ts      # Folder/file generation
 │   └── templates/        # Template definitions + example.md content
+├── examples/             # Generated example projects for each template
 ├── biome.json
 ├── knip.json
 ├── tsconfig.json
